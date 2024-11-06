@@ -6,21 +6,18 @@ def main():
 
     json_input = read_json_from_file('emaildata.json')
     emails = parse_email_thread(json_input)
-    for email in emails:
-        print(email)
 
-    to_summarize = ""
-    for element in emails: #Consolidate the data into one variable
-        to_summarize += element + " "
+    # Combine messages for summarization
+    to_summarize = " ".join(email.message for email in emails)
 
-    # json_f.close()
+    print("Original text:", to_summarize)
 
-    print("Original text: " + to_summarize)
-
+    # Initialize and apply the summarizer
     model = Summarizer()
-    result = model(to_summarize, num_sentences=1)
+    result = model(to_summarize, num_sentences=2)
 
-    print(result)
+    # Print the summarized result
+    print("Summary:", result)
 
 if __name__ == "__main__":
     main()
