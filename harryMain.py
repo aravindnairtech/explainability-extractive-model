@@ -2,14 +2,10 @@ import torch
 import json
 from summarizer import Summarizer
 
-json_f = open('emaildata.json')
-email_json = json.load(json_f)
-
 to_summarize = ""
-for element in email_json: #Consolidate the data into one variable
-    to_summarize += element + " "
-
-json_f.close()
+with open('emaildata.json') as f:
+    for element['message'] in f: #Consolidate the data into one variable
+        to_summarize += element + " "
 
 print("Original text: " + to_summarize)
 
