@@ -4,7 +4,7 @@ from summarizer import Summarizer
 from data_parser import parse_email_thread, read_json_from_file
 def main():
 
-    json_input = read_json_from_file('emaildata.json')
+    json_input = read_json_from_file('seededjson.json')
     emails = parse_email_thread(json_input)
 
     # Combine messages for summarization
@@ -14,7 +14,7 @@ def main():
 
     # Initialize and apply the summarizer
     model = Summarizer()
-    result = model(to_summarize, num_sentences=2)
+    result = model(to_summarize, num_sentences=3)
 
     # Print the summarized result
     print("Summary:", result)

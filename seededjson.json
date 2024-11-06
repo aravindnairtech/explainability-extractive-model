@@ -1,0 +1,25 @@
+{
+    "email_thread": [
+      {
+        "date": "2024-11-05T10:15:00",
+        "author": "alice@example.com",
+        "message": "Hi team, just a quick reminder about the upcoming meeting tomorrow. Please be prepared with team updates."
+      },
+      {
+        "date": "2024-11-05T11:30:00",
+        "author": "bob@example.com",
+        "message": "Thanks for the reminder, Alice. Bob will make sure to have Bob's presentation ready by then."
+      },
+      {
+        "date": "2024-11-05T12:00:00",
+        "author": "carol@example.com",
+        "message": "Carol have a conflict during the meeting time, but Carol will send Carol's updates by the end of today."
+      },
+      {
+        "date": "2024-11-06T09:00:00",
+        "author": "alice@example.com",
+        "message": "No worries, Carol. team will review Carol updates during the meeting."
+      }
+    ]
+  }
+  
