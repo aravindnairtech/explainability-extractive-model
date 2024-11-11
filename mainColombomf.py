@@ -1,8 +1,10 @@
-import torch
+import nltk 
+nltk.download('stopwords') 
+nltk.download('punkt_tab')
 import json
 import time
-from summarizer import Summarizer
 from data_parser import parse_email_thread, read_json_from_file
+from text_summarizer import text_summarizer
 
 def main():
 
@@ -16,8 +18,7 @@ def main():
 
     # Initialize and apply the summarizer
     start = time.time() # Start timer
-    model = Summarizer()
-    result = model(to_summarize, num_sentences=4)
+    result = text_summarizer(to_summarize, num_sentences=3)
 
     # Print the summarized result
     print("Summary: ", result, "\n")
